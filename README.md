@@ -12,23 +12,28 @@ O objetivo é automatizar o reconhecimento de rostos de celebridades e gerar ima
 ```sh
 aws configure
 ```
-Certifique-se de ter as permissões necessárias para usar o serviço **Textract**.
 
-3. **Ambiente virtual Python** recomendado (opcional, mas recomendado).
+Certifique-se de ter as permissões necessárias para usar o serviço **Rekognition**.
+
+3. Criar as seguintes pastas no diretório principal do projeto:
+
+images/originais: onde as imagens originais devem ser armazenadas.
+
+images/reconhecidas: onde as imagens processadas serão salvas.
+
+4. (Opcional) **Ambiente virtual Python ou Conda**.
 
 ## Instalação
 
-### 1. Criar um ambiente virtual (opcional):
+### 1. Configurar o ambiente virtual (opcional):
 
-O projeto foi executado no **ambiente base do Conda**, que é o ambiente padrão quando você instala o Conda. Não há necessidade de criar um novo ambiente isolado para rodar o projeto, mas caso prefira, você pode optar por criar um ambiente Conda dedicado.
+#### Caso prefira usar o ambiente base do Conda:
 
-#### Rodando no ambiente base do Conda:
+Se você utiliza Conda, pode rodar o projeto diretamente no ambiente base. Nesse caso, pule para o próximo passo.
 
-Caso você já tenha o **Conda** instalado, pode rodar o projeto diretamente no ambiente base. O ambiente base é ativado automaticamente ao abrir o terminal.
+#### Criando um ambiente isolado:
 
-#### Criando um ambiente isolado (opcional):
-
-Se preferir criar um ambiente isolado para o projeto, você pode fazer isso com os seguintes comandos:
+Se preferir, crie um ambiente dedicado para o projeto com:
 
 ```sh
 conda create --name meu-ambiente python=3.8
@@ -36,7 +41,7 @@ conda activate meu-ambiente
 ```
 
 ### 2. Instalar as dependências do projeto:
-Com o ambiente ativado (seja no ambiente base ou em um novo ambiente Conda), instale as dependências do projeto com o seguinte comando:
+Com o ambiente configurado e ativado, instale as dependências com:
 
 ```sh
 pip install -r requirements.txt
