@@ -1,0 +1,5 @@
+# Biblioteca para interagir com os serviços AWS
+boto3
+
+# Biblioteca para tipos estáticos e auto-complete do boto3 Rekognition (AWS)
+mypy_boto3_rekognition
